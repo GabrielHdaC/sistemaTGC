@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "sistemaTGC",
+            "console": "integratedTerminal",
+            "vmArgs": "-Dfile.encoding=UTF-8 -Dconsole.encoding=UTF-8",
+            "env": {
+                "JAVA_TOOL_OPTIONS": "-Dfile.encoding=UTF-8"
+            },
+            "args": []
+        }
+    ]
+}

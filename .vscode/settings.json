@@ -1,0 +1,26 @@
+{
+    "files.encoding": "utf8",
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.saveActions.organizeImports": true,
+    "java.sources.organizeImports.starThreshold": 99,
+    "java.sources.organizeImports.staticStarThreshold": 99,
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-Command", "chcp 65001 >$null; $Host.UI.RawUI.OutputEncoding = [System.Text.Encoding]::UTF8; powershell.exe -NoProfile -ExecutionPolicy Bypass"]
+        }
+    },
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.debug.settings.console": "integratedTerminal",
+    "java.debug.settings.hotCodeReplace": "manual",
+    "java.debug.settings.vmArgs": "-Dfile.encoding=UTF-8 -Dconsole.encoding=UTF-8",
+    "editor.renderWhitespace": "boundary",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "terminal.integrated.env.windows": {
+        "JAVA_TOOL_OPTIONS": "-Dfile.encoding=UTF-8 -Dconsole.encoding=UTF-8"
+    }
+}
