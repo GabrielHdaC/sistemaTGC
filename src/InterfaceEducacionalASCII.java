@@ -1,12 +1,37 @@
-import java.util.*;
+import java.io.IOException;
+import java.util.Scanner;
 
 /**
- * Interface de Usuário - Sistema Educacional de Conjuntos
- * Versão ASCII compatível com Windows PowerShell
- * Baseado nos Fundamentos Matemáticos da Profª Drª Janaína Poffo Possamai
+ * ============================================================================
+ *                    INTERFACE DE USUÁRIO ASCII PROFISSIONAL
+ * ============================================================================
+ * 
+ * Classe responsável por toda interação com o usuário através de interface
+ * textual ASCII otimizada para terminais Windows, Linux e macOS.
+ * 
+ * <h3>Características:</h3>
+ * <ul>
+ *   <li>🎨 Interface ASCII elegante e responsiva</li>
+ *   <li>🛡️ Validação robusta de entrada de dados</li>
+ *   <li>💻 Compatibilidade multiplataforma</li>
+ *   <li>🎯 Experiência de usuário intuitiva</li>
+ *   <li>📱 Design adaptável para diferentes tamanhos de terminal</li>
+ * </ul>
+ * 
+ * <h3>Funcionalidades:</h3>
+ * - Exibição de menus hierárquicos
+ * - Coleta e validação de dados do usuário
+ * - Formatação profissional de saídas
+ * - Controle de fluxo interativo
+ * - Tratamento de erros de entrada
+ * 
+ * @author Sistema TGC - Equipe UI/UX
+ * @version 2.0 - Interface Profissional
+ * @since 2025
+ * ============================================================================
  */
 public class InterfaceEducacionalASCII {
-    private Scanner scanner;
+    private final Scanner scanner;
     
     public InterfaceEducacionalASCII() {
         this.scanner = new Scanner(System.in);
@@ -20,22 +45,30 @@ public class InterfaceEducacionalASCII {
         limparTela();
         System.out.println("================================================================");
         System.out.println("          ** SISTEMA EDUCACIONAL DE CONJUNTOS **");
-        System.out.println("         Aprenda matemática de forma simples!");
+        System.out.println("             VERSÃO AVANÇADA - TODAS AS FUNCIONALIDADES");
         System.out.println("================================================================");
         System.out.println();
-        System.out.println("** ESCOLHA O QUE VOCÊ QUER APRENDER:");
-        System.out.println();
+        System.out.println("    === CONTEÚDO EDUCATIVO ===");
         System.out.println("  [1] Paradoxos Famosos (histórias interessantes)");
         System.out.println("  [2] O que são Conjuntos (conceitos básicos)");
         System.out.println("  [3] Operações com Conjuntos (união, interseção...)");
         System.out.println("  [4] Problemas Práticos (exercícios do dia a dia)");
+        System.out.println();
+        System.out.println("    === FERRAMENTAS BÁSICAS ===");
         System.out.println("  [5] Calculadora Simples (faça contas com conjuntos)");
         System.out.println("  [6] Números Matemáticos (N, Z, Q, R...)");
         System.out.println("  [7] Teste seus Conhecimentos (quiz rápido)");
-        System.out.println("  [8] Sair");
+        System.out.println();
+        System.out.println("    === FUNCIONALIDADES AVANÇADAS ===");
+        System.out.println("  [8] Gerenciador de Conjuntos (nomeados + histórico)");
+        System.out.println("  [9] Conjuntos Multi-Tipo (números, decimais, texto)");
+        System.out.println(" [10] Sistema de Persistência (salvar/carregar arquivos)");
+        System.out.println(" [11] Sistema de Exportação (relatórios profissionais)");
+        System.out.println();
+        System.out.println(" [12] Sair");
         System.out.println();
         System.out.println("================================================================");
-        System.out.print(">> Digite o número da sua escolha: ");
+        System.out.print(">> Digite o número da sua escolha (1-12): ");
         
         return lerInteiroValidado();
     }
@@ -66,7 +99,7 @@ public class InterfaceEducacionalASCII {
         // Para Windows
         try {
             new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-        } catch (Exception e) {
+        } catch (IOException | InterruptedException e) {
             // Se falhar, imprime linhas em branco
             for (int i = 0; i < 50; i++) {
                 System.out.println();

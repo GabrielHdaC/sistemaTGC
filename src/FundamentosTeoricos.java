@@ -86,11 +86,12 @@ public class FundamentosTeoricos {
      */
     private static void imprimirRegras() {
         imprimirSecao("📋 REGRAS",
-            "• Todo homem adulto é obrigado a se barbear diariamente\n" +
-            "• O homem pode fazer a barba sozinho, em casa\n" +
-            "• Ou pode ir no barbeiro – o único da cidade\n" +
-            "• Lei: \"O barbeiro deverá fazer a barba daqueles que\n" +
-            "  optarem por não fazer a barba sozinhos\"");
+            """
+            • Todo homem adulto é obrigado a se barbear diariamente
+            • O homem pode fazer a barba sozinho, em casa
+            • Ou pode ir no barbeiro – o único da cidade
+            • Lei: "O barbeiro deverá fazer a barba daqueles que
+              optarem por não fazer a barba sozinhos\"""");
     }
     
     /**
@@ -126,8 +127,9 @@ public class FundamentosTeoricos {
      */
     private static void imprimirConclusaoEImportancia() {
         imprimirSecao("💡 CONCLUSÃO",
-            "Este é um PARADOXO LÓGICO - uma declaração aparentemente\n" +
-            "verdadeira que leva a uma contradição lógica.");
+            """
+            Este é um PARADOXO LÓGICO - uma declaração aparentemente
+            verdadeira que leva a uma contradição lógica.""");
         
         System.out.println("🎯 IMPORTÂNCIA:");
         System.out.println("• Mostra limitações da linguagem comum");
@@ -157,9 +159,10 @@ public class FundamentosTeoricos {
         imprimirCabecalho("🏨 HOTEL DE HILBERT 🏨");
         
         imprimirSecao("🏨 SITUAÇÃO",
-            "Imagine um hotel com INFINITOS quartos (um para cada número natural)\n" +
-            "Quartos: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ..., ∞\n" +
-            "Status: TODOS os quartos estão ocupados! 🔴");
+            """
+            Imagine um hotel com INFINITOS quartos (um para cada número natural)
+            Quartos: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ..., ∞
+            Status: TODOS os quartos estão ocupados! 🔴""");
         
         imprimirProblemaHotel();
         imprimirSolucaoRemanejamento();
@@ -288,8 +291,9 @@ public class FundamentosTeoricos {
      */
     private static void imprimirObservacaoInicial() {
         imprimirSecao("🤔 OBSERVAÇÃO",
-            "• P ⊂ ℕ (Pares é subconjunto dos Naturais)\n" +
-            "• Logo, P deveria ser \"menor\" que ℕ, certo?");
+            """
+            • P ⊂ ℕ (Pares é subconjunto dos Naturais)
+            • Logo, P deveria ser "menor" que ℕ, certo?""");
     }
     
     /**

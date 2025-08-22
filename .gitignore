@@ -1,16 +1,16 @@
-# Compiled class file
+# Compiled class files
 *.class
 
-# Log file
+# Build directories
+bin/
+build/
+target/
+out/
+
+# Log files
 *.log
 
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
+# Package Files
 *.jar
 *.war
 *.nar
@@ -19,6 +19,56 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# IDE files - Eclipse/IntelliJ
+.classpath
+.project
+.settings/
+.metadata/
+*.iml
+*.iws
+*.ipr
+.idea/
+
+# IDE files - VS Code specific
+.vscode/settings.json
+.vscode/tasks.json
+
+# Environment files
+.env
+
+# Temporary files
+*.tmp
+*.temp
+*_backup.*
+*_temp.*
+*_old.*
+temp/
+legacy/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Documentation temporária
+LIMPEZA_*.md
+PROGRESSO_*.md
+README_EXECUCAO.md
+README_NOVO.md
+RELATORIO_*.md
+SOLUCAO_*.md
+
+# Scripts duplicados (manter apenas run.bat)
+executar.bat
+executar.ps1
+executar_*.ps1
+executar_*.bat
+build-*.bat
+
+# Java virtual machine crash logs
 hs_err_pid*
 replay_pid*

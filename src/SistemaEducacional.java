@@ -1,26 +1,45 @@
 import java.util.*;
 
 /**
- * SISTEMA EDUCACIONAL DE CONJUNTOS - CLASSE PRINCIPAL
+ * ============================================================================
+ *                      CONTROLADOR PRINCIPAL DO SISTEMA
+ * ============================================================================
  * 
- * Esta é a classe mais importante do programa!
- * Ela controla tudo que acontece no sistema.
+ * Classe central responsável por coordenar todas as operações do sistema
+ * educacional de conjuntos. Atua como o núcleo de controle que integra
+ * todos os módulos especializados.
  * 
- * O QUE FAZ:
- * - Mostra o menu principal
- * - Chama as funções corretas quando você escolhe uma opção  
- * - Controla o fluxo do programa (início, meio, fim)
+ * <h3>Responsabilidades:</h3>
+ * <ul>
+ *   <li>🎯 Controle de fluxo da aplicação</li>
+ *   <li>🎨 Apresentação do menu principal</li>
+ *   <li>🔗 Integração entre módulos funcionais</li>
+ *   <li>⚡ Delegação de tarefas especializadas</li>
+ *   <li>🛡️ Tratamento de erros e exceções</li>
+ * </ul>
  * 
- * COMO FUNCIONA:
- * 1. Cria uma interface para conversar com o usuário
- * 2. Fica em loop mostrando o menu até você sair
- * 3. Para cada opção, chama a função correspondente
+ * <h3>Arquitetura Modular:</h3>
+ * <pre>
+ * SistemaEducacional (core)
+ * ├── InterfaceEducacionalASCII (ui)
+ * ├── GerenciadorConjuntos (modules)
+ * ├── ConjuntosMultiTipo (modules)
+ * ├── SistemaPersistencia (modules)
+ * ├── SistemaExportacao (modules)
+ * ├── TeoriaConjuntos (utils)
+ * ├── OperacoesAvancadas (utils)
+ * ├── ProblemasConjuntos (utils)
+ * └── FundamentosTeoricos (utils)
+ * </pre>
  * 
- * @author Sistema TGS - Versão Simplificada
+ * @author Sistema TGC
+ * @version 2.0 - Arquitetura Profissional
+ * @since 2025
+ * ============================================================================
  */
 public class SistemaEducacional {
     // Esta variável guarda nossa "interface" - é quem conversa com o usuário
-    private InterfaceEducacionalASCII ui;
+    private final InterfaceEducacionalASCII ui;
     
     /**
      * CONSTRUTOR - Roda quando criamos um novo SistemaEducacional
@@ -78,13 +97,29 @@ public class SistemaEducacional {
                     executarTestes();
                     break;
                     
-                case 8: // Sair
+                case 8: // Gerenciador de Conjuntos
+                    executarGerenciadorConjuntos();
+                    break;
+                    
+                case 9: // Conjuntos Multi-Tipo
+                    executarConjuntosMultiTipo();
+                    break;
+                    
+                case 10: // Sistema de Persistência
+                    executarSistemaPersistencia();
+                    break;
+                    
+                case 11: // Sistema de Exportação
+                    executarSistemaExportacao();
+                    break;
+                    
+                case 12: // Sair
                     continuar = false;  // Para o loop
                     ui.exibirDespedida();
                     break;
                     
                 default: // Se digitou número inválido
-                    ui.exibirErro("Opção inválida! Escolha entre 1 e 8.");
+                    ui.exibirErro("Opção inválida! Escolha entre 1 e 12.");
                     ui.pausar();
                     break;
             }
@@ -136,9 +171,16 @@ public class SistemaEducacional {
         System.out.println("          ** TEORIA DOS CONJUNTOS - CONCEITOS **");
         System.out.println("================================================================");
         System.out.println("Demonstração dos conceitos básicos de teoria dos conjuntos...");
-        System.out.println("- Definições e Notações");
-        System.out.println("- Tipos de Conjuntos");
-        System.out.println("- Igualdade e Pertinência");
+        System.out.println();
+        
+        // Chamar os métodos da classe TeoriaConjuntos
+        TeoriaConjuntos.definicoesNotacoes();
+        ui.pausar();
+        
+        TeoriaConjuntos.tiposConjuntos();
+        ui.pausar();
+        
+        TeoriaConjuntos.igualdadeConjuntos();
         ui.pausar();
     }
     
@@ -149,11 +191,26 @@ public class SistemaEducacional {
         System.out.println("\n================================================================");
         System.out.println("          ** OPERAÇÕES ENTRE CONJUNTOS **");
         System.out.println("================================================================");
-        System.out.println("Demonstração das operações básicas:");
-        System.out.println("- União (A U B)");
-        System.out.println("- Interseção (A n B)");
-        System.out.println("- Diferença (A - B)");
-        System.out.println("- Complemento");
+        System.out.println("Demonstração das operações básicas com conjuntos...");
+        System.out.println();
+        
+        // Chamar os métodos da classe OperacoesAvancadas
+        OperacoesAvancadas.uniaoAvancada();
+        ui.pausar();
+        
+        OperacoesAvancadas.intersecaoAvancada();
+        ui.pausar();
+        
+        OperacoesAvancadas.diferencaAvancada();
+        ui.pausar();
+        
+        OperacoesAvancadas.complementoAvancado();
+        ui.pausar();
+        
+        OperacoesAvancadas.subconjuntosInclusao();
+        ui.pausar();
+        
+        OperacoesAvancadas.diagramasVenn();
         ui.pausar();
     }
     
@@ -495,5 +552,43 @@ public class SistemaEducacional {
         System.out.println("}");
         System.out.println("   (Elementos de A que NÃO estão em B, EM ORDEM!)");
         System.out.println();
+    }
+    
+    // ===== NOVAS FUNCIONALIDADES AVANÇADAS =====
+    
+    /**
+     * EXECUTAR GERENCIADOR DE CONJUNTOS
+     * Permite criar conjuntos nomeados e manter histórico
+     */
+    private void executarGerenciadorConjuntos() {
+        GerenciadorConjuntos gerenciador = new GerenciadorConjuntos(ui);
+        gerenciador.executarGerenciador();
+    }
+    
+    /**
+     * EXECUTAR CONJUNTOS MULTI-TIPO
+     * Trabalha com Integer, Double e String
+     */
+    private void executarConjuntosMultiTipo() {
+        ConjuntosMultiTipo multiTipo = new ConjuntosMultiTipo(ui);
+        multiTipo.executarMultiTipo();
+    }
+    
+    /**
+     * EXECUTAR SISTEMA DE PERSISTÊNCIA
+     * Salva e carrega conjuntos de arquivos
+     */
+    private void executarSistemaPersistencia() {
+        SistemaPersistencia persistencia = new SistemaPersistencia(ui);
+        persistencia.executarPersistencia();
+    }
+    
+    /**
+     * EXECUTAR SISTEMA DE EXPORTAÇÃO
+     * Gera relatórios profissionais em vários formatos
+     */
+    private void executarSistemaExportacao() {
+        SistemaExportacao exportacao = new SistemaExportacao(ui);
+        exportacao.executarExportacao();
     }
 }
